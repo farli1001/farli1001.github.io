@@ -220,11 +220,12 @@ body, html {
     border-radius: 15px;
     display: inline-block;
 }
+
 .cloud {
     position: absolute;
     width: 200px;
     height: 60px;
-    margin-left: -30vh;
+    margin-left: -24vh;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50px;
     animation: moveCloud 30s linear infinite;
@@ -285,6 +286,7 @@ body, html {
     background-color: rgba(255, 255, 255, 0.4);
     transform: scale(0);
     animation: ripple 0.6s linear;
+    pointer-events: none;
 }
 
 @keyframes ripple {
@@ -294,6 +296,7 @@ body, html {
     }
 }
 
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .message-card {
         padding: 20px;
@@ -317,6 +320,22 @@ body, html {
     .copyright p {
         font-size: 0.7em;
     }
+    .cloud {
+        width: 150px;
+        height: 45px;
+    }
+    .cloud::before {
+        width: 75px;
+        height: 75px;
+        top: -37px;
+        left: 7px;
+    }
+    .cloud::after {
+        width: 90px;
+        height: 90px;
+        top: -52px;
+        right: 7px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -331,5 +350,32 @@ body, html {
     }
     .icon, .illustration {
         font-size: 2em;
+    }
+    .cloud {
+        width: 100px;
+        height: 30px;
+    }
+    .cloud::before {
+        width: 50px;
+        height: 50px;
+        top: -25px;
+        left: 5px;
+    }
+    .cloud::after {
+        width: 60px;
+        height: 60px;
+        top: -35px;
+        right: 5px;
+    }
+    .water-animation {
+        width: 80px;
+        height: 80px;
+    }
+    .copyright {
+        bottom: 5px;
+    }
+    .copyright p {
+        font-size: 0.6em;
+        padding: 3px 8px;
     }
 }
