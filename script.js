@@ -61,3 +61,24 @@ function showMessage(index) {
 }
 
 showMessage(0);
+
+const waterAnimation = document.querySelector(".water-animation");
+const waterDrop = document.querySelector(".water-drop");
+
+waterAnimation.addEventListener("mouseenter", () => {
+  waterDrop.style.top = "80px";
+  waterDrop.style.width = "100px";
+  waterDrop.style.height = "20px";
+  waterDrop.style.borderRadius = "10px 10px 0 0";
+  setTimeout(() => {
+    waterAnimation.style.setProperty("--after-height", "20px");
+  }, 100);
+});
+
+waterAnimation.addEventListener("mouseleave", () => {
+  waterDrop.style.top = "0";
+  waterDrop.style.width = "20px";
+  waterDrop.style.height = "20px";
+  waterDrop.style.borderRadius = "50%";
+  waterAnimation.style.setProperty("--after-height", "0");
+});
