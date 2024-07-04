@@ -83,10 +83,17 @@ body, html {
 .icon, .illustration {
     font-size: 3em;
     transition: transform 0.3s ease;
+    animation: rotateIcon 10s linear infinite;
 }
 
 .icon:hover, .illustration:hover {
     transform: scale(1.1);
+    animation-play-state: paused;
+}
+
+@keyframes rotateIcon {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .progress-bar {
@@ -192,6 +199,7 @@ body, html {
 .water-animation:hover::after {
     height: 20px;
 }
+
 .copyright {
     position: absolute;
     bottom: 20px;
@@ -212,15 +220,80 @@ body, html {
     border-radius: 15px;
     display: inline-block;
 }
+.cloud {
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    margin-left: -30vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    animation: moveCloud 30s linear infinite;
+}
 
-@media (max-width: 768px) {
-    .copyright {
-        bottom: 10px;
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: 10px;
+}
+
+.cloud::after {
+    width: 120px;
+    height: 120px;
+    top: -70px;
+    right: 10px;
+}
+
+@keyframes moveCloud {
+    0% { left: -200px; }
+    100% { left: 100%; }
+}
+
+.bubble {
+    position: absolute;
+    bottom: -20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: riseBubble 8s infinite;
+}
+
+@keyframes riseBubble {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0;
     }
-    .copyright p {
-        font-size: 0.7em;
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
     }
 }
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .message-card {
         padding: 20px;
@@ -238,6 +311,12 @@ body, html {
         height: 40px;
         min-height: 40px;
     }
+    .copyright {
+        bottom: 10px;
+    }
+    .copyright p {
+        font-size: 0.7em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -254,4 +333,3 @@ body, html {
         font-size: 2em;
     }
 }
-

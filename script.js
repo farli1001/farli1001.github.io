@@ -60,8 +60,6 @@ function showMessage(index) {
   setTimeout(() => showMessage(index + 1), 5000);
 }
 
-showMessage(0);
-
 const waterAnimation = document.querySelector(".water-animation");
 const waterDrop = document.querySelector(".water-drop");
 
@@ -82,3 +80,56 @@ waterAnimation.addEventListener("mouseleave", () => {
   waterDrop.style.borderRadius = "50%";
   waterAnimation.style.setProperty("--after-height", "0");
 });
+
+function createClouds() {
+  const container = document.querySelector(".container");
+  for (let i = 0; i < 3; i++) {
+    const cloud = document.createElement("div");
+    cloud.classList.add("cloud");
+    cloud.style.top = `${Math.random() * 30 + 5}%`;
+    cloud.style.animationDelay = `${Math.random() * 20}s`;
+    container.appendChild(cloud);
+  }
+}
+
+function createBubbles() {
+  const container = document.querySelector(".container");
+  for (let i = 0; i < 20; i++) {
+    const bubble = document.createElement("div");
+    bubble.classList.add("bubble");
+    bubble.style.left = `${Math.random() * 100}%`;
+    bubble.style.width = `${Math.random() * 30 + 10}px`;
+    bubble.style.height = bubble.style.width;
+    bubble.style.animationDuration = `${Math.random() * 4 + 4}s`;
+    bubble.style.animationDelay = `${Math.random() * 2}s`;
+    container.appendChild(bubble);
+  }
+}
+
+function createRippleEffect(e) {
+  let ripple = document.createElement("div");
+  ripple.className = "ripple";
+  document.body.appendChild(ripple);
+
+  ripple.style.left = `${e.clientX}px`;
+  ripple.style.top = `${e.clientY}px`;
+
+  ripple.style.animation = "none";
+  ripple.offsetHeight; // trigger reflow
+  ripple.style.animation = null;
+
+  setTimeout(() => {
+    ripple.remove();
+  }, 600);
+}
+
+// Initialize everything
+function init() {
+  showMessage(0);
+  createClouds();
+  createBubbles();
+  document.addEventListener("click", createRippleEffect);
+}
+
+// Run initialization when DOM is fully loaded
+document.addEventListener("DOMContentLoaded", init);
