@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AirKita - Gerakan Konservasi Air Indonesia</title>
+    <title>AirKita - Edukasi Konservasi Air</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
@@ -288,10 +288,16 @@
         .about-image {
             flex: 1;
             position: relative;
+            max-width: 500px;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
         }
 
         .about-image img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
@@ -411,10 +417,84 @@
             margin-bottom: 0.5rem;
         }
 
+        /* Articles Section Styles */
+        .articles {
+            padding: 8rem 0;
+            background-color: var(--white);
+        }
+
+        .articles h2 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .article-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .article-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .article-content {
+            padding: 1.5rem;
+        }
+
+        .article-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .article-excerpt {
+            font-size: 1rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .article-link {
+            display: inline-block;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .article-link:hover {
+            color: var(--primary-color);
+        }
+
+        #loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
         /* Contact Section Styles */
         .contact {
             padding: 8rem 0;
-            background-color: var(--white);
+            background-color: var(--bg-color);
             position: relative;
             overflow: hidden;
         }
@@ -426,7 +506,7 @@
             left: 0;
             right: 0;
             height: 100px;
-            background: linear-gradient(to bottom left, var(--bg-color) 50%, transparent 50%);
+            background: linear-gradient(to bottom left, var(--white) 50%, transparent 50%);
         }
 
         .contact h2 {
@@ -646,6 +726,26 @@
                 flex-direction: column;
             }
 
+            .about-image {
+                max-width: 100%;
+                aspect-ratio: 16 / 9;
+            }
+
+            .about h2 {
+                font-size: 2.5rem;
+            }
+
+            .about-text p {
+                font-size: 1rem;
+            }
+
+            .water-drop {
+                width: 80px;
+                height: 80px;
+                top: -20px;
+                right: -20px;
+            }
+
             .mobile-menu-btn {
                 display: block;
             }
@@ -676,242 +776,359 @@
             }
         }
     </style>
-</head>
-
-<body>
-    <header>
-        <nav class="container">
-            <a href="#" class="logo">AirKita</a>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#facts">Fakta</a></li>
-                <li><a href="#contact">Kontak</a></li>
-                <li><a href="index2.html">website lain</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Jaga Kebersihan Air Kita</h1>
-                <p>Untuk masa depan yang lebih cerah dan berkelanjutan. Bersama-sama, kita dapat membuat perbedaan.</p>
-                <a href="#about" class="cta-button">Pelajari Lebih Lanjut</a>
-            </div>
-            <div class="water-animation"></div>
-            <div class="water-animation"></div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2>Tentang Kami</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Kami adalah tim ahli konservasi air yang berdedikasi untuk melestarikan sumber daya air
-                            berharga kita.
-                            </p>
-                        <p>Visi kami adalah menciptakan dunia di mana setiap individu memahami nilai air dan berperan
-                            aktif dalam
-                            pelestariannya. Misi kami meliputi:</p>
-                        <ul>
-                            <li>Mengedukasi masyarakat melalui program-program inovatif</li>
-                            <li>Mengembangkan teknologi hemat air yang dapat diakses</li>
-                            <li>Berkolaborasi untuk kebijakan air yang berkelanjutan</li>
-                            <li>Melakukan penelitian untuk solusi pengelolaan air baru</li>
-                            <li>Mendorong partisipasi aktif masyarakat dalam pelestarian air</li>
-                        </ul>
-                    </div>
-                    <div class="about-image">
-                        <img src="a.jpg" alt="Tim Konservasi Air">
-                        <div class="water-drop"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="facts" class="facts">
-            <div class="container">
-                <h2>Fakta Menarik tentang Air</h2>
-                <div class="facts-grid">
-                    <div class="fact-card">
-                        <i class="fas fa-globe fact-icon"></i>
-                        <div class="fact-number">71%</div>
-                        <p>Permukaan bumi tertutup air</p>
-                    </div>
-                    <div class="fact-card">
-                        <i class="fas fa-tint fact-icon"></i>
-                        <div class="fact-number">2.5%</div>
-                        <p>Air tawar dari total air di bumi</p>
-                    </div>
-                    <div class="fact-card">
-                        <i class="fas fa-users fact-icon"></i>
-                        <div class="fact-number">2 Miliar</div>
-                        <p>Orang kekurangan akses air bersih</p>
-                    </div>
-                    <div class="fact-card">
-                        <i class="fas fa-faucet fact-icon"></i>
-                        <div class="fact-number">4000 L</div>
-                        <p>Air terbuang per bulan dari keran bocor</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Hubungi Kami</h2>
-                <form class="contact-form" action="https://formsubmit.co/your-email@example.com" method="POST">
-                    <div class="form-group">
-                        <label for="name">Nama</label>
-                        <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Masukkan email Anda">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Pesan</label>
-                        <textarea id="message" name="message" rows="5" required
-                            placeholder="Tulis pesan Anda"></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Kirim Pesan</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">AirKita</div>
-                <ul class="footer-links">
+    </head>
+    
+    <body>
+        <header>
+            <nav class="container">
+                <a href="#" class="logo">AirKita</a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
                     <li><a href="#home">Beranda</a></li>
                     <li><a href="#about">Tentang</a></li>
                     <li><a href="#facts">Fakta</a></li>
+                    <li><a href="#articles">Artikel</a></li>
                     <li><a href="#contact">Kontak</a></li>
+                    <li><a href="index2.html">Karya Lain</a></li>
                 </ul>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </nav>
+        </header>
+    
+        <main>
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <h1>Edukasi Konservasi Air</h1>
+                    <p>Mari belajar tentang pentingnya menjaga sumber daya air kita untuk masa depan yang berkelanjutan.</p>
+                    <a href="#about" class="cta-button">Pelajari Lebih Lanjut</a>
                 </div>
+                <div class="water-animation"></div>
+                <div class="water-animation"></div>
+            </section>
+    
+            <section id="about" class="about">
+                <div class="container">
+                    <h2>Tentang Konservasi Air</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>Konservasi air adalah upaya penting untuk melindungi dan mengelola sumber daya air kita
+                                dengan bijak.</p>
+                            <p>Beberapa alasan mengapa konservasi air sangat penting:</p>
+                            <ul>
+                                <li>Menjaga ketersediaan air bersih untuk generasi mendatang</li>
+                                <li>Melindungi ekosistem air dan keanekaragaman hayati</li>
+                                <li>Mengurangi biaya pengolahan dan distribusi air</li>
+                                <li>Menghemat energi yang digunakan dalam proses pengolahan air</li>
+                                <li>Mengurangi dampak perubahan iklim pada sumber daya air</li>
+                            </ul>
+                        </div>
+                        <div class="about-image">
+                            <img src="A.jpeg" alt="Ilustrasi Konservasi Air">
+                            <div class="water-drop"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="facts" class="facts">
+                <div class="container">
+                    <h2>Fakta Menarik tentang Air</h2>
+                    <div class="facts-grid">
+                        <div class="fact-card">
+                            <i class="fas fa-globe fact-icon"></i>
+                            <div class="fact-number">71%</div>
+                            <p>Permukaan bumi tertutup air</p>
+                        </div>
+                        <div class="fact-card">
+                            <i class="fas fa-tint fact-icon"></i>
+                            <div class="fact-number">2.5%</div>
+                            <p>Air tawar dari total air di bumi</p>
+                        </div>
+                        <div class="fact-card">
+                            <i class="fas fa-users fact-icon"></i>
+                            <div class="fact-number">2Miliar</div>
+                            <p>Orang kekurangan akses air bersih</p>
+                        </div>
+                        <div class="fact-card">
+                            <i class="fas fa-faucet fact-icon"></i>
+                            <div class="fact-number">4000L</div>
+                            <p>Air terbuang per bulan dari keran bocor</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="articles" class="articles">
+                <div class="container">
+                    <h2>Artikel Konservasi Air</h2>
+                    <div id="article-grid" class="article-grid">
+                        <!-- Articles will be dynamically loaded here -->
+                    </div>
+                    <div id="loading" style="display: none;">Memuat artikel...</div>
+                </div>
+            </section>
+    
+            <section id="contact" class="contact">
+                <div class="container">
+                    <h2>Hubungi Kami</h2>
+                    <form class="contact-form" action="https://formsubmit.co/your-email@example.com" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nama</label>
+                            <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Masukkan email Anda">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Tulis pesan atau pertanyaan Anda tentang konservasi air"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Kirim Pesan</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">AirKita</div>
+                    <ul class="footer-links">
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#facts">Fakta</a></li>
+                        <li><a href="#articles">Artikel</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                        <li><a href="index2.html">Karya Lain</a></li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <p>&copy; 2024 AirKita. Hak Cipta Dilindungi.</p>
             </div>
-            <p>&copy; 2024 AirKita. Hak Cipta Dilindungi.</p>
-        </div>
-    </footer>
+        </footer>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+        
+        <script>
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // GSAP Animations
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Hero animations
-        gsap.from('.hero h1', { opacity: 0, y: 50, duration: 1, delay: 0.5 });
-        gsap.from('.hero p', { opacity: 0, y: 50, duration: 1, delay: 0.7 });
-        gsap.from('.cta-button', { opacity: 0, y: 50, duration: 1, delay: 0.9 });
-
-        // About section animations
-        gsap.from('.about-text', {
-            opacity: 0,
-            x: -50,
-            duration: 1,
-            scrollTrigger: {
-                trigger: '.about',
-                start: 'top 80%'
-            }
-        });
-
-        gsap.from('.about-image', {
-            opacity: 0,
-            x: 50,
-            duration: 1,
-            scrollTrigger: {
-                trigger: '.about',
-                start: 'top 80%'
-            }
-        });
-
-        // Facts animations
-        gsap.from('.fact-card', {
-            opacity: 0,
-            y: 50,
-            duration: 0.8,
-            stagger: 0.2,
-            scrollTrigger: {
-                trigger: '.facts',
-                start: 'top 80%'
-            }
-        });
-
-        // Contact form animation
-        gsap.from('.contact-form', {
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            scrollTrigger: {
-                trigger: '.contact',
-                start: 'top 80%'
-            }
-        });
-
-        // Floating animation for water drop
-        gsap.to('.water-drop', {
-            y: -20,
-            duration: 2,
-            repeat: -1,
-            yoyo: true,
-            ease: "power1.inOut"
-        });
-
-        // Parallax effect for about image
-        gsap.to('.about-image img', {
-            yPercent: 20,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".about",
-                scrub: true
-            },
-        });
-
-        // Animate fact numbers
-        const factNumbers = document.querySelectorAll('.fact-number');
-        factNumbers.forEach(number => {
-            const finalNumber = parseInt(number.innerText);
-            gsap.from(number, {
-                innerText: 0,
-                duration: 2,
-                snap: { innerText: 1 },
-                scrollTrigger: {
-                    trigger: number,
-                    start: "top 80%"
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
                 }
             });
-        });
-    </script>
-</body>
 
-</html>
+            // GSAP Animations
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Hero animations
+            gsap.from('.hero h1', { opacity: 0, y: 50, duration: 1, delay: 0.5 });
+            gsap.from('.hero p', { opacity: 0, y: 50, duration: 1, delay: 0.7 });
+            gsap.from('.cta-button', { opacity: 0, y: 50, duration: 1, delay: 0.9 });
+
+            // About section animations
+            gsap.from('.about-text', {
+                opacity: 0,
+                x: -50,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: '.about',
+                    start: 'top 80%'
+                }
+            });
+
+            gsap.from('.about-image', {
+                opacity: 0,
+                x: 50,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: '.about',
+                    start: 'top 80%'
+                }
+            });
+
+            // Facts animations
+            gsap.from('.fact-card', {
+                opacity: 0,
+                y: 50,
+                duration: 0.8,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: '.facts',
+                    start: 'top 80%'
+                }
+            });
+
+            // Contact form animation
+            gsap.from('.contact-form', {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: '.contact',
+                    start: 'top 80%'
+                }
+            });
+
+            // Floating animation for water drop
+            gsap.to('.water-drop', {
+                y: -20,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
+
+            // Parallax effect for about image
+            gsap.to('.about-image img', {
+                yPercent: 20,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".about",
+                    scrub: true
+                },
+            });
+
+            // Animate fact numbers
+            const factNumbers = document.querySelectorAll('.fact-number');
+            factNumbers.forEach(number => {
+                const finalNumber = parseInt(number.innerText);
+                gsap.from(number, {
+                    innerText: 0,
+                    duration: 2,
+                    snap: { innerText: 1 },
+                    scrollTrigger: {
+                        trigger: number,
+                        start: "top 80%"
+                    }
+                });
+            });
+
+            // Infinite scroll functionality
+            let page = 1;
+            const articlesPerPage = 6;
+            let loading = false;
+
+            const articleGrid = document.getElementById('article-grid');
+            const loadingElement = document.getElementById('loading');
+
+            // Sample article data (in a real application, this would be fetched from a server)
+            const articles = [
+                {
+                    title: "10 Cara Mudah Menghemat Air di Rumah",
+                    excerpt: "Pelajari langkah-langkah sederhana untuk mengurangi penggunaan air sehari-hari dan menghemat tagihan air Anda.",
+                    image: "/api/placeholder/400/300"
+                },
+                {
+                    title: "Dampak Polusi Air terhadap Ekosistem",
+                    excerpt: "Temukan bagaimana polusi air mempengaruhi kehidupan akuatik dan apa yang dapat kita lakukan untuk mencegahnya.",
+                    image: "/api/placeholder/400/300"
+                },
+                {
+                    title: "Teknologi Inovatif dalam Pengolahan Air",
+                    excerpt: "Jelajahi teknologi terbaru yang digunakan untuk membersihkan dan mendaur ulang air di seluruh dunia.",
+                    image: "/api/placeholder/400/300"
+                },
+                {
+                    title: "Pentingnya Konservasi Air di Pertanian",
+                    excerpt: "Pelajari bagaimana praktik pertanian yang efisien dapat membantu menghemat air dan meningkatkan produksi pangan.",
+                    image: "/api/placeholder/400/300"
+                },
+                {
+                    title: "Krisis Air Global: Tantangan dan Solusi",
+                    excerpt: "Pahami penyebab krisis air di berbagai belahan dunia dan langkah-langkah yang diambil untuk mengatasinya.",
+                    image: "/api/placeholder/400/300"
+                },
+                {
+                    title: "Mengenal Jejak Air dalam Kehidupan Sehari-hari",
+                    excerpt: "Temukan berapa banyak air yang dibutuhkan untuk memproduksi makanan dan barang-barang yang kita gunakan setiap hari.",
+                    image: "/api/placeholder/400/300"
+                },
+                {
+                    title: "Cara Mendeteksi dan Memperbaiki Kebocoran Air",
+                    excerpt: "Pelajari teknik sederhana untuk menemukan dan memperbaiki kebocoran air di rumah Anda.",
+                    image: "/api/placeholder/400/300"
+                },
+                {
+                    title: "Peran Hutan dalam Menjaga Sumber Air",
+                    excerpt: "Pahami pentingnya hutan dalam menjaga kualitas dan kuantitas air serta dampaknya terhadap perubahan iklim.",
+                    image: "/api/placeholder/400/300"
+                },
+                {
+                    title: "Sistem Pemanenan Air Hujan untuk Rumah",
+                    excerpt: "Pelajari cara memanfaatkan air hujan untuk kebutuhan rumah tangga dan taman Anda.",
+                    image: "/api/placeholder/400/300"
+                },
+                {
+                    title: "Konservasi Air di Perkotaan: Tantangan dan Peluang",
+                    excerpt: "Temukan strategi inovatif untuk mengelola air di kota-kota besar dan menciptakan lingkungan urban yang lebih berkelanjutan.",
+                    image: "/api/placeholder/400/300"
+                }
+            ];
+
+            function loadArticles() {
+                if (loading) return;
+                loading = true;
+                loadingElement.style.display = 'block';
+
+                setTimeout(() => {
+                    const startIndex = (page - 1) * articlesPerPage;
+                    const endIndex = startIndex + articlesPerPage;
+                    const pageArticles = articles.slice(startIndex, endIndex);
+
+                    pageArticles.forEach(article => {
+                        const articleElement = document.createElement('div');
+                        articleElement.className = 'article-card';
+                        articleElement.innerHTML = `
+                                <div class="article-image" style="background-image: url('${article.image}')"></div>
+                                <div class="article-content">
+                                    <h3 class="article-title">${article.title}</h3>
+                                    <p class="article-excerpt">${article.excerpt}</p>
+                                    <a href="#" class="article-link">Baca selengkapnya</a>
+                                </div>
+                            `;
+                        articleGrid.appendChild(articleElement);
+                    });
+
+                    page++;
+                    loading = false;
+                    loadingElement.style.display = 'none';
+
+                    if (endIndex >= articles.length) {
+                        window.removeEventListener('scroll', handleScroll);
+                        loadingElement.textContent = 'Tidak ada artikel lagi';
+                        loadingElement.style.display = 'block';
+                    }
+                }, 1000); // Simulating network delay
+            }
+
+            function handleScroll() {
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
+                    loadArticles();
+                }
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            loadArticles(); // Load initial articles
+        </script>
+        </body>
+        
+        </html>
