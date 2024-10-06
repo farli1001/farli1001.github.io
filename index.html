@@ -1209,7 +1209,7 @@
         loadArticles(); // Load initial articles
 
         document.addEventListener('DOMContentLoaded', function () {
-                // Ganti 'your-key-here' dengan nama unik untuk situs Anda
+                // Ganti dengan nama domain GitHub Pages Anda
                 const COUNTER_KEY = 'farli1001.github.io';
 
                 // Fungsi untuk memformat angka dengan pemisah ribuan
@@ -1217,22 +1217,21 @@
                     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
                 }
 
-                // Fungsi untuk mengambil dan memperbarui hitungan pengunjung
-                function updateVisitorCount() {
-                    fetch(`https://api.countapi.xyz/hit/${COUNTER_KEY}`)
-                        .then(response => response.json())
-                        .then(data => {
-                            const formattedCount = formatNumber(data.value);
-                            document.getElementById('visitorCount').textContent = formattedCount;
-                        })
-                        .catch(error => {
-                            console.error('Error updating visitor count:', error);
-                            document.getElementById('visitorCount').textContent = 'Error';
-                        });
+                // Fungsi callback untuk menerima data dari CountAPI
+                window.updateVisitorCount = function (response) {
+                    const formattedCount = formatNumber(response.value);
+                    document.getElementById('visitorCount').textContent = formattedCount;
+                };
+
+                // Fungsi untuk membuat dan menambahkan script JSONP
+                function loadVisitorCount() {
+                    const script = document.createElement('script');
+                    script.src = `https://api.countapi.xyz/hit/${COUNTER_KEY}?callback=updateVisitorCount`;
+                    document.body.appendChild(script);
                 }
 
-                // Panggil fungsi untuk memperbarui hitungan pengunjung
-                updateVisitorCount();
+                // Panggil fungsi untuk memuat hitungan pengunjung
+                loadVisitorCount();
             });
     </script>
 </body>
