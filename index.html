@@ -1209,7 +1209,7 @@
         loadArticles(); // Load initial articles
 
         document.addEventListener('DOMContentLoaded', function () {
-                // Ganti dengan nama domain GitHub Pages Anda
+                // Ganti dengan nama unik untuk situs Anda
                 const COUNTER_KEY = 'farli1001.github.io';
 
                 // Fungsi untuk memformat angka dengan pemisah ribuan
@@ -1217,21 +1217,20 @@
                     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
                 }
 
-                // Fungsi callback untuk menerima data dari CountAPI
-                window.updateVisitorCount = function (response) {
-                    const formattedCount = formatNumber(response.value);
-                    document.getElementById('visitorCount').textContent = formattedCount;
-                };
-
-                // Fungsi untuk membuat dan menambahkan script JSONP
-                function loadVisitorCount() {
+                // Fungsi untuk mengambil dan memperbarui hitungan pengunjung
+                function updateVisitorCount() {
                     const script = document.createElement('script');
-                    script.src = `https://api.countapi.xyz/hit/${COUNTER_KEY}?callback=updateVisitorCount`;
+                    script.src = `https://api.countapi.xyz/hit/${COUNTER_KEY}?callback=cb`;
                     document.body.appendChild(script);
                 }
 
-                // Panggil fungsi untuk memuat hitungan pengunjung
-                loadVisitorCount();
+                // Callback function
+                window.cb = function (response) {
+                    document.getElementById('visitorCount').textContent = formatNumber(response.value);
+                };
+
+                // Panggil fungsi untuk memperbarui hitungan pengunjung
+                updateVisitorCount();
             });
     </script>
 </body>
