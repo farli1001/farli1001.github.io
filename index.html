@@ -974,7 +974,7 @@
                 </div>
             </div>
             <p>&copy; 2024 AirKita. Hak Cipta Dilindungi.</p>
-            <p>Anda adalah pengunjung ke-<span id="visitorCount">0</span></p>
+            <div id="visitor-count">Pengunjung: <span id="count">Loading...</span></div>
         </div>
     </footer>
 
@@ -1208,29 +1208,46 @@
         window.addEventListener('scroll', handleScroll);
         loadArticles(); // Load initial articles
 
+       
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RJQWKQNJK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2RJQWKQNJK');
+
         document.addEventListener('DOMContentLoaded', function () {
-                // Ganti dengan nama unik untuk situs Anda
-                const COUNTER_KEY = 'farli1001.github.io';
-
-                // Fungsi untuk memformat angka dengan pemisah ribuan
-                function formatNumber(num) {
-                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                // Fungsi untuk mengambil data dari Google Analytics
+                function getAnalyticsData() {
+                    gapi.client.init({
+                        'apiKey': 'YOUR_API_KEY',
+                        'discoveryDocs': ['https://analyticsreporting.googleapis.com/$discovery/rest'],
+                    }).then(function () {
+                        return gapi.client.request({
+                            path: '/v4/reports:batchGet',
+                            root: 'https://analyticsreporting.googleapis.com/',
+                            method: 'POST',
+                            body: {
+                                reportRequests: [
+                                    {
+                                        viewId: 'YOUR_VIEW_ID',
+                                        dateRanges: [{ startDate: '7daysAgo', endDate: 'today' }],
+                                        metrics: [{ expression: 'ga:users' }]
+                                    }
+                                ]
+                            }
+                        });
+                    }).then(function (response) {
+                        var count = response.result.reports[0].data.totals[0].values[0];
+                        document.getElementById('count').textContent = count;
+                    }, console.error.bind(console));
                 }
 
-                // Fungsi untuk mengambil dan memperbarui hitungan pengunjung
-                function updateVisitorCount() {
-                    const script = document.createElement('script');
-                    script.src = `https://api.countapi.xyz/hit/${COUNTER_KEY}?callback=cb`;
-                    document.body.appendChild(script);
-                }
-
-                // Callback function
-                window.cb = function (response) {
-                    document.getElementById('visitorCount').textContent = formatNumber(response.value);
-                };
-
-                // Panggil fungsi untuk memperbarui hitungan pengunjung
-                updateVisitorCount();
+                // Load the Google Analytics client library
+                gapi.load('client', getAnalyticsData);
             });
     </script>
 </body>
