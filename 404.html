@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Halaman Tidak Ditemukan - AirKita</title>
+  <title>Oops! Halaman Tidak Ditemukan - AirKita</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
     rel="stylesheet">
@@ -38,7 +38,7 @@
     h1 {
       font-family: 'Playfair Display', serif;
       color: var(--primary-color);
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 20px;
     }
 
@@ -61,13 +61,50 @@
     .btn:hover {
       background-color: var(--secondary-color);
     }
+
+    .sad-drop {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 20px;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
+    <svg class="sad-drop" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Tetesan air -->
+      <path d="M100 20
+                     C 60 20, 20 60, 20 100
+                     C 20 140, 60 180, 100 180
+                     C 140 180, 180 140, 180 100
+                     C 180 60, 140 20, 100 20 Z" fill="#1ca3ec">
+        <animate attributeName="d" dur="3s" repeatCount="indefinite"
+          values="M100 20 C 60 20, 20 60, 20 100 C 20 140, 60 180, 100 180 C 140 180, 180 140, 180 100 C 180 60, 140 20, 100 20 Z;
+                                 M100 30 C 60 30, 30 60, 30 100 C 30 140, 60 170, 100 170 C 140 170, 170 140, 170 100 C 170 60, 140 30, 100 30 Z;
+                                 M100 20 C 60 20, 20 60, 20 100 C 20 140, 60 180, 100 180 C 140 180, 180 140, 180 100 C 180 60, 140 20, 100 20 Z" />
+      </path>
+
+      <!-- Mata kiri -->
+      <circle cx="70" cy="80" r="10" fill="white">
+        <animate attributeName="cy" values="80;85;80" dur="3s" repeatCount="indefinite" />
+      </circle>
+
+      <!-- Mata kanan -->
+      <circle cx="130" cy="80" r="10" fill="white">
+        <animate attributeName="cy" values="80;85;80" dur="3s" repeatCount="indefinite" />
+      </circle>
+
+      <!-- Mulut cemberut -->
+      <path d="M70 130 Q100 110 130 130" stroke="white" stroke-width="5" fill="none">
+        <animate attributeName="d" values="M70 130 Q100 110 130 130;
+                                 M70 135 Q100 115 130 135;
+                                 M70 130 Q100 110 130 130" dur="3s" repeatCount="indefinite" />
+      </path>
+    </svg>
     <h1>Oops! Halaman Tidak Ditemukan</h1>
-    <p>Maaf, halaman yang Anda cari tidak dapat ditemukan. Mungkin halaman telah dipindahkan atau dihapus.</p>
+    <p>Maaf, sepertinya halaman yang Anda cari telah menguap. Tetesan air kami juga sedih karenanya.</p>
+    <p>Jangan khawatir! Mari kita kembali ke sumber dan temukan informasi yang Anda butuhkan.</p>
     <a href="/" class="btn">Kembali ke Beranda</a>
   </div>
 </body>
