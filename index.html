@@ -1112,56 +1112,125 @@
         // Sample article data (in a real application, this would be fetched from a server)
         const articles = [
             {
-                title: "10 Cara Mudah Menghemat Air di Rumah",
-                excerpt: "Pelajari langkah-langkah sederhana untuk mengurangi penggunaan air sehari-hari dan menghemat tagihan air Anda.",
-                image: "/api/placeholder/400/300"
+                id: 1,
+                title: "10 Cara Efektif Menghemat Air di Rumah",
+                excerpt: "Pelajari langkah-langkah praktis untuk mengurangi penggunaan air sehari-hari, termasuk perbaikan kebocoran, penggunaan alat hemat air, dan perubahan kebiasaan.",
+                image: "/api/placeholder/400/300",
+                content: `
+            <h1>10 Cara Efektif Menghemat Air di Rumah</h1>
+            
+            <p>Air adalah sumber daya berharga yang sering kali kita anggap remeh. Namun, dengan sedikit usaha, kita dapat secara signifikan mengurangi penggunaan air di rumah kita. Berikut adalah 10 cara efektif untuk menghemat air:</p>
+            
+            <h2>1. Perbaiki Kebocoran</h2>
+            <p>Kebocoran kecil dapat menyebabkan pemborosan air yang besar. Periksa dan perbaiki kebocoran di keran, pipa, dan toilet Anda secara teratur.</p>
+            
+            <h2>2. Gunakan Alat Hemat Air</h2>
+            <p>Pasang kepala shower dan keran hemat air. Alat-alat ini dapat mengurangi aliran air tanpa mengurangi tekanan.</p>
+            
+            <h2>3. Buat Perubahan di Kamar Mandi</h2>
+            <p>Kurangi waktu mandi Anda dan pertimbangkan untuk memasang toilet dual-flush untuk mengontrol jumlah air yang digunakan setiap kali disiram.</p>
+            
+            <h2>4. Kelola Penggunaan Air di Dapur</h2>
+            <p>Jangan mencuci piring di bawah air mengalir. Gunakan baskom atau isi wastafel untuk mencuci dan membilas.</p>
+            
+            <h2>5. Manfaatkan Mesin Cuci dengan Bijak</h2>
+            <p>Hanya jalankan mesin cuci ketika benar-benar penuh dan pilih setelan hemat air jika tersedia.</p>
+            
+            <h2>6. Kelola Taman dengan Cerdas</h2>
+            <p>Pilih tanaman yang tahan kekeringan dan siram tanaman di pagi atau malam hari untuk mengurangi penguapan.</p>
+            
+            <h2>7. Tampung Air Hujan</h2>
+            <p>Gunakan sistem penampungan air hujan untuk menyiram taman atau mencuci mobil.</p>
+            
+            <h2>8. Gunakan Kembali Air Abu-abu</h2>
+            <p>Air bekas mencuci sayuran atau buah dapat digunakan untuk menyiram tanaman.</p>
+            
+            <h2>9. Matikan Keran</h2>
+            <p>Pastikan untuk mematikan keran saat menyikat gigi, mencukur, atau melakukan aktivitas serupa.</p>
+            
+            <h2>10. Edukasi Anggota Keluarga</h2>
+            <p>Ajarkan pentingnya menghemat air kepada seluruh anggota keluarga dan dorong mereka untuk mengadopsi kebiasaan hemat air.</p>
+            
+            <p>Dengan menerapkan tips-tips ini, Anda tidak hanya akan menghemat air, tetapi juga mengurangi tagihan air dan berkontribusi pada pelestarian lingkungan. Setiap tetes air yang dihemat membuat perbedaan!</p>
+        `,
+                url: "artikel-1.html"
             },
             {
-                title: "Dampak Polusi Air terhadap Ekosistem",
-                excerpt: "Temukan bagaimana polusi air mempengaruhi kehidupan akuatik dan apa yang dapat kita lakukan untuk mencegahnya.",
-                image: "/api/placeholder/400/300"
-            },
-            {
-                title: "Teknologi Inovatif dalam Pengolahan Air",
-                excerpt: "Jelajahi teknologi terbaru yang digunakan untuk membersihkan dan mendaur ulang air di seluruh dunia.",
-                image: "/api/placeholder/400/300"
-            },
-            {
-                title: "Pentingnya Konservasi Air di Pertanian",
-                excerpt: "Pelajari bagaimana praktik pertanian yang efisien dapat membantu menghemat air dan meningkatkan produksi pangan.",
-                image: "/api/placeholder/400/300"
-            },
-            {
-                title: "Krisis Air Global: Tantangan dan Solusi",
-                excerpt: "Pahami penyebab krisis air di berbagai belahan dunia dan langkah-langkah yang diambil untuk mengatasinya.",
-                image: "/api/placeholder/400/300"
-            },
-            {
-                title: "Mengenal Jejak Air dalam Kehidupan Sehari-hari",
-                excerpt: "Temukan berapa banyak air yang dibutuhkan untuk memproduksi makanan dan barang-barang yang kita gunakan setiap hari.",
-                image: "/api/placeholder/400/300"
-            },
-            {
-                title: "Cara Mendeteksi dan Memperbaiki Kebocoran Air",
-                excerpt: "Pelajari teknik sederhana untuk menemukan dan memperbaiki kebocoran air di rumah Anda.",
-                image: "/api/placeholder/400/300"
-            },
-            {
-                title: "Peran Hutan dalam Menjaga Sumber Air",
-                excerpt: "Pahami pentingnya hutan dalam menjaga kualitas dan kuantitas air serta dampaknya terhadap perubahan iklim.",
-                image: "/api/placeholder/400/300"
-            },
-            {
-                title: "Sistem Pemanenan Air Hujan untuk Rumah",
-                excerpt: "Pelajari cara memanfaatkan air hujan untuk kebutuhan rumah tangga dan taman Anda.",
-                image: "/api/placeholder/400/300"
-            },
-            {
-                title: "Konservasi Air di Perkotaan: Tantangan dan Peluang",
-                excerpt: "Temukan strategi inovatif untuk mengelola air di kota-kota besar dan menciptakan lingkungan urban yang lebih berkelanjutan.",
-                image: "/api/placeholder/400/300"
+                id: 2,
+                title: "Dampak Polusi Air terhadap Ekosistem Akuatik",
+                excerpt: "Temukan bagaimana polusi air mempengaruhi kehidupan akuatik, termasuk eutrofikasi, bioakumulasi toksin, dan hilangnya keanekaragaman hayati di sungai dan laut.",
+                image: "/api/placeholder/400/300",
+                content: `
+            <h1>Dampak Polusi Air terhadap Ekosistem Akuatik</h1>
+            
+            <p>Polusi air adalah salah satu ancaman terbesar bagi ekosistem akuatik di seluruh dunia. Dampaknya sangat luas dan dapat menyebabkan kerusakan jangka panjang pada lingkungan air dan makhluk hidup yang bergantung padanya.</p>
+            
+            <h2>Eutrofikasi</h2>
+            <p>Salah satu dampak utama polusi air adalah eutrofikasi. Ini terjadi ketika nutrisi berlebih, terutama nitrogen dan fosfor, masuk ke badan air. Akibatnya:</p>
+            <ul>
+                <li>Pertumbuhan alga yang tidak terkendali (blooming)</li>
+                <li>Penurunan kadar oksigen terlarut</li>
+                <li>Kematian ikan dan organisme air lainnya</li>
+            </ul>
+            
+            <h2>Bioakumulasi Toksin</h2>
+            <p>Polutan seperti merkuri dan PCB dapat terakumulasi dalam tubuh organisme air. Proses ini disebut bioakumulasi dan dapat menyebabkan:</p>
+            <ul>
+                <li>Gangguan sistem reproduksi pada ikan</li>
+                <li>Keracunan pada predator tingkat atas, termasuk manusia</li>
+                <li>Perubahan perilaku pada organisme air</li>
+            </ul>
+            
+            <h2>Hilangnya Keanekaragaman Hayati</h2>
+            <p>Polusi air dapat menyebabkan hilangnya habitat dan keanekaragaman hayati akuatik:</p>
+            <ul>
+                <li>Spesies yang sensitif terhadap polusi menghilang</li>
+                <li>Rantai makanan terganggu</li>
+                <li>Ekosistem menjadi tidak stabil</li>
+            </ul>
+            
+            <h2>Asidifikasi Air</h2>
+            <p>Polusi udara dapat menyebabkan hujan asam yang mengasamkan badan air, berdampak pada:</p>
+            <ul>
+                <li>Kerusakan cangkang organisme bercangkang</li>
+                <li>Perubahan pH yang mempengaruhi kemampuan bertahan hidup spesies</li>
+            </ul>
+            
+            <h2>Sedimentasi</h2>
+            <p>Erosi tanah yang berlebihan dapat menyebabkan sedimentasi di badan air, mengakibatkan:</p>
+            <ul>
+                <li>Kekeruhan air yang mengurangi penetrasi cahaya</li>
+                <li>Tertutupnya habitat penting seperti terumbu karang</li>
+            </ul>
+            
+            <h2>Solusi dan Pencegahan</h2>
+            <p>Untuk melindungi ekosistem akuatik, kita perlu:</p>
+            <ul>
+                <li>Mengurangi penggunaan pupuk dan pestisida</li>
+                <li>Meningkatkan pengolahan air limbah</li>
+                <li>Melindungi daerah aliran sungai</li>
+                <li>Mendidik masyarakat tentang dampak polusi air</li>
+            </ul>
+            
+            <p>Dengan memahami dampak polusi air terhadap ekosistem akuatik, kita dapat mengambil langkah-langkah yang diperlukan untuk melindungi sumber daya air kita yang berharga dan menjaga keseimbangan ekosistem untuk generasi mendatang.</p>
+        `,
+                url: "artikel-2.html"
             }
         ];
+
+        function createArticleCard(article) {
+            const articleElement = document.createElement('div');
+            articleElement.className = 'article-card';
+            articleElement.innerHTML = `
+        <div class="article-image" style="background-image: url('${article.image}')"></div>
+        <div class="article-content">
+            <h3 class="article-title">${article.title}</h3>
+            <p class="article-excerpt">${article.excerpt}</p>
+            <a href="${article.url}" class="article-link">Baca selengkapnya</a>
+        </div>
+    `;
+            return articleElement;
+        }
 
         function loadArticles() {
             if (loading) return;
@@ -1174,16 +1243,7 @@
                 const pageArticles = articles.slice(startIndex, endIndex);
 
                 pageArticles.forEach(article => {
-                    const articleElement = document.createElement('div');
-                    articleElement.className = 'article-card';
-                    articleElement.innerHTML = `
-                                                <div class="article-image" style="background-image: url('${article.image}')"></div>
-                                                <div class="article-content">
-                                                    <h3 class="article-title">${article.title}</h3>
-                                                    <p class="article-excerpt">${article.excerpt}</p>
-                                                    <a href="#" class="article-link">Baca selengkapnya</a>
-                                                </div>
-                                            `;
+                    const articleElement = createArticleCard(article);
                     articleGrid.appendChild(articleElement);
                 });
 
@@ -1208,7 +1268,7 @@
         window.addEventListener('scroll', handleScroll);
         loadArticles(); // Load initial articles
 
-       
+
     </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RJQWKQNJK"></script>
@@ -1220,35 +1280,35 @@
         gtag('config', 'G-2RJQWKQNJK');
 
         document.addEventListener('DOMContentLoaded', function () {
-                // Fungsi untuk mengambil data dari Google Analytics
-                function getAnalyticsData() {
-                    gapi.client.init({
-                        'apiKey': 'YOUR_API_KEY',
-                        'discoveryDocs': ['https://analyticsreporting.googleapis.com/$discovery/rest'],
-                    }).then(function () {
-                        return gapi.client.request({
-                            path: '/v4/reports:batchGet',
-                            root: 'https://analyticsreporting.googleapis.com/',
-                            method: 'POST',
-                            body: {
-                                reportRequests: [
-                                    {
-                                        viewId: 'YOUR_VIEW_ID',
-                                        dateRanges: [{ startDate: '7daysAgo', endDate: 'today' }],
-                                        metrics: [{ expression: 'ga:users' }]
-                                    }
-                                ]
-                            }
-                        });
-                    }).then(function (response) {
-                        var count = response.result.reports[0].data.totals[0].values[0];
-                        document.getElementById('count').textContent = count;
-                    }, console.error.bind(console));
-                }
+            // Fungsi untuk mengambil data dari Google Analytics
+            function getAnalyticsData() {
+                gapi.client.init({
+                    'apiKey': 'YOUR_API_KEY',
+                    'discoveryDocs': ['https://analyticsreporting.googleapis.com/$discovery/rest'],
+                }).then(function () {
+                    return gapi.client.request({
+                        path: '/v4/reports:batchGet',
+                        root: 'https://analyticsreporting.googleapis.com/',
+                        method: 'POST',
+                        body: {
+                            reportRequests: [
+                                {
+                                    viewId: 'YOUR_VIEW_ID',
+                                    dateRanges: [{ startDate: '7daysAgo', endDate: 'today' }],
+                                    metrics: [{ expression: 'ga:users' }]
+                                }
+                            ]
+                        }
+                    });
+                }).then(function (response) {
+                    var count = response.result.reports[0].data.totals[0].values[0];
+                    document.getElementById('count').textContent = count;
+                }, console.error.bind(console));
+            }
 
-                // Load the Google Analytics client library
-                gapi.load('client', getAnalyticsData);
-            });
+            // Load the Google Analytics client library
+            gapi.load('client', getAnalyticsData);
+        });
     </script>
 </body>
 
