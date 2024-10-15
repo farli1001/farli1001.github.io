@@ -123,21 +123,21 @@ const articles = [
     title: "10 Cara Efektif Menghemat Air di Rumah",
     excerpt:
       "Pelajari langkah-langkah praktis untuk mengurangi penggunaan air sehari-hari, termasuk perbaikan kebocoran, penggunaan alat hemat air, dan perubahan kebiasaan.",
-    image: "https://source.unsplash.com/random/400x300?water,saving",
+    image: "img/1.webp",
   },
   {
     id: 2,
     title: "Dampak Polusi Air terhadap Ekosistem Akuatik",
     excerpt:
       "Temukan bagaimana polusi air mempengaruhi kehidupan akuatik, termasuk eutrofikasi, bioakumulasi toksin, dan hilangnya keanekaragaman hayati di sungai dan laut.",
-    image: "https://source.unsplash.com/random/400x300?water,pollution",
+    image: "img/2.webp",
   },
   {
     id: 3,
     title: "Teknologi Terkini dalam Pengolahan Air",
     excerpt:
       "Jelajahi inovasi terbaru dalam teknologi pengolahan air, termasuk desalinasi, filtrasi membran, dan sistem daur ulang air yang canggih.",
-    image: "https://source.unsplash.com/random/400x300?water,technology",
+    image: "img/3.webp",
   },
   {
     id: 4,
@@ -145,7 +145,7 @@ const articles = [
       "Dampak Perubahan Iklim terhadap Sumber Daya Air: Krisis Global yang Mendesak",
     excerpt:
       "Seberapa bahaya sih perubahan iklim terhadap masalah perairan ini",
-    image: "https://source.unsplash.com/random/400x300?water,technology",
+    image: "img/4.webp",
   },
 ];
 

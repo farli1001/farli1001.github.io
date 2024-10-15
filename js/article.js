@@ -55,7 +55,7 @@ const articleId = getUrlParameter('id');
 const articles = {
   1: {
     title: "10 Cara Efektif Menghemat Air di Rumah",
-    image: "https://source.unsplash.com/random/800x400?water,saving",
+    image: "img/1.webp",
     content: `
             <p>Air adalah sumber kehidupan yang sangat penting bagi manusia dan makhluk hidup lainnya. Sayangnya, dengan
             peningkatan populasi dan perubahan iklim, ketersediaan air bersih semakin berkurang. Oleh karena itu, penting bagi
@@ -131,254 +131,146 @@ const articles = {
             Energy Star, University of California, CSIRO, Greywater Action, Water Research Foundation.</p>
         `,
   },
-  2: {
-    title:
-      "Dampak Polusi Air terhadap Ekosistem Akuatik: Ancaman Serius bagi Kehidupan Air",
-    image: "https://source.unsplash.com/random/800x400?water,pollution",
-    content: `
-            <p>Polusi air telah menjadi salah satu ancaman terbesar bagi ekosistem akuatik di seluruh dunia. Menurut laporan
-            <a href="https://www.unwater.org/publications/un-world-water-development-report-2023" target="_blank">UNEP tahun
-            2023</a>, lebih dari 80% air limbah global dibuang ke lingkungan tanpa pengolahan yang memadai,
-            menyebabkan kerusakan serius pada sungai, danau, dan lautan kita. Artikel ini akan mengeksplorasi secara
-            mendalam bagaimana polusi air mempengaruhi kehidupan akuatik dan keseimbangan ekosistem air.</p>
+  "2": {
+    "title": "Dampak Polusi Air terhadap Ekosistem Akuatik: Ancaman Serius bagi Kehidupan Air",
+    "image": "img/2.webp",
+    "content": `
+      <p>Polusi air adalah salah satu masalah besar yang mengancam kehidupan di dalam air. Berdasarkan laporan dari <a href="https://www.unwater.org/publications/un-world-water-development-report-2023" target="_blank">UNEP tahun 2023</a>, lebih dari 80% air limbah dibuang ke lingkungan tanpa pengolahan yang benar. Hal ini merusak sungai, danau, dan lautan. Artikel ini membahas bagaimana polusi air merusak kehidupan di air dan keseimbangan ekosistem.</p>
 
-            <h2>1. Eutrofikasi: Ancaman Tersembunyi</h2>
-            <p>Eutrofikasi adalah salah satu dampak paling signifikan dari polusi air. Fenomena ini terjadi ketika nutrisi
-            berlebih, terutama nitrogen dan fosfor, masuk ke badan air. Sebuah studi oleh <a
-            href="https://www.epa.gov/nutrientpollution/problem" target="_blank">Environmental Protection
-            Agency (EPA) AS</a> menunjukkan bahwa 40% dari danau dan sungai di Amerika Serikat mengalami eutrofikasi.
-            Dampak eutrofikasi meliputi:</p>
-            <ul>
-            <li>Pertumbuhan alga yang tidak terkendali (blooming), yang dapat menutupi permukaan air dan menghambat
-            penetrasi cahaya.</li>
-            <li>Penurunan drastis kadar oksigen terlarut, menyebabkan kondisi hipoksia atau bahkan anoksia.</li>
-            <li>Kematian massal ikan dan organisme air lainnya akibat kekurangan oksigen.</li>
-            <li>Perubahan komposisi spesies dalam ekosistem, sering kali mengarah pada dominasi spesies yang lebih toleran
-            terhadap polusi.</li>
-            </ul>
+      <h2>1. Eutrofikasi: Masalah Nutrisi Berlebih</h2>
+      <p>Eutrofikasi terjadi ketika terlalu banyak nutrisi seperti nitrogen dan fosfor masuk ke air. Menurut <a href="https://www.epa.gov/nutrientpollution/problem" target="_blank">EPA Amerika Serikat</a>, 40% dari danau dan sungai di Amerika mengalami eutrofikasi. Dampak eutrofikasi termasuk:</p>
+      <ul>
+        <li>Pertumbuhan alga berlebih yang menghalangi sinar matahari masuk ke dalam air.</li>
+        <li>Kadar oksigen dalam air menurun, membuat ikan dan hewan lain kekurangan oksigen.</li>
+        <li>Kematian massal ikan dan hewan air lainnya.</li>
+        <li>Spesies yang lebih kuat terhadap polusi mendominasi, mengganggu keseimbangan ekosistem.</li>
+      </ul>
 
-            <h2>2. Bioakumulasi Toksin: Ancaman Jangka Panjang</h2>
-            <p>Polutan persisten seperti merkuri, PCB (Polychlorinated Biphenyls), dan pestisida dapat terakumulasi dalam
-            jaringan organisme air melalui proses yang disebut bioakumulasi. Penelitian yang dipublikasikan dalam jurnal <a
-            href="https://www.epa.gov/mercury/health-effects-exposures-mercury" target="_blank">"Environmental Science &
-            Technology"</a>
-            menemukan bahwa konsentrasi merkuri dalam ikan predator di beberapa wilayah telah mencapai tingkat yang
-            membahayakan kesehatan manusia. Efek bioakumulasi meliputi:</p>
-            <ul>
-            <li>Gangguan sistem reproduksi pada ikan, menyebabkan penurunan populasi.</li>
-            <li>Perubahan perilaku pada organisme air, mempengaruhi pola makan dan migrasi.</li>
-            <li>Risiko kesehatan bagi predator tingkat atas, termasuk manusia yang mengkonsumsi ikan tercemar.</li>
-            <li>Kerusakan genetik yang dapat diturunkan ke generasi berikutnya.</li>
-            </ul>
+      <h2>2. Bioakumulasi Toksin: Penumpukan Zat Berbahaya</h2>
+      <p>Polutan seperti merkuri dan pestisida terakumulasi dalam tubuh hewan air melalui proses yang disebut bioakumulasi. Menurut penelitian di <a href="https://www.epa.gov/mercury/health-effects-exposures-mercury" target="_blank">Environmental Science & Technology</a>, kadar merkuri pada ikan di beberapa wilayah telah mencapai tingkat yang berbahaya. Bioakumulasi dapat menyebabkan:</p>
+      <ul>
+        <li>Gangguan reproduksi ikan.</li>
+        <li>Perubahan perilaku ikan, mempengaruhi makan dan migrasi.</li>
+        <li>Bahaya kesehatan bagi manusia yang mengonsumsi ikan tercemar.</li>
+        <li>Kerusakan genetik yang bisa diwariskan ke generasi berikutnya.</li>
+      </ul>
 
-            <h2>3. Hilangnya Keanekaragaman Hayati</h2>
-            <p>Polusi air adalah salah satu penyebab utama hilangnya keanekaragaman hayati akuatik. Laporan <a
-            href="https://livingplanet.panda.org/en-US/" target="_blank">"Living Planet Report" oleh WWF tahun 2024</a>
-            menunjukkan penurunan rata-rata 83% populasi spesies air tawar sejak 1970, dengan polusi air sebagai faktor
-            utama. Dampak pada keanekaragaman hayati meliputi:</p>
-            <ul>
-            <li>Kepunahan lokal spesies yang sensitif terhadap polusi.</li>
-            <li>Gangguan rantai makanan akuatik, menyebabkan ketidakseimbangan ekosistem.</li>
-            <li>Hilangnya habitat penting seperti terumbu karang akibat pengasaman laut.</li>
-            <li>Penurunan populasi spesies kunci yang berperan penting dalam menjaga kesehatan ekosistem.</li>
-            </ul>
+      <h2>3. Hilangnya Keanekaragaman Hayati</h2>
+      <p>Polusi air menyebabkan hilangnya banyak spesies air. Menurut <a href="https://livingplanet.panda.org/en-US/" target="_blank">WWF Living Planet Report 2024</a>, populasi spesies air tawar menurun hingga 83% sejak 1970. Dampaknya termasuk:</p>
+      <ul>
+        <li>Kepunahan spesies yang sensitif terhadap polusi.</li>
+        <li>Ketidakseimbangan rantai makanan di ekosistem air.</li>
+        <li>Kerusakan habitat penting seperti terumbu karang.</li>
+      </ul>
 
-            <h2>4. Asidifikasi Air: Perubahan Kimia yang Mengancam</h2>
-            <p>Peningkatan CO2 atmosfer tidak hanya menyebabkan perubahan iklim tetapi juga mengakibatkan asidifikasi air,
-            terutama di lautan. Studi oleh <a
-            href="https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean-acidification"
-            target="_blank">National Oceanic and Atmospheric Administration (NOAA)</a> menunjukkan bahwa pH air laut telah
-            menurun sebesar 0,1 unit sejak era pra-industri, yang meskipun terdengar kecil, sebenarnya merepresentasikan
-            peningkatan keasaman sebesar 30%. Dampak asidifikasi meliputi:</p>
-            <ul>
-            <li>Kerusakan pada cangkang dan rangka kapur organisme seperti kerang, siput, dan karang.</li>
-            <li>Gangguan proses fisiologis pada ikan, termasuk kemampuan untuk mendeteksi predator.</li>
-            <li>Perubahan dalam siklus nutrisi laut, mempengaruhi produktivitas primer.</li>
-            <li>Potensi kolapsnya ekosistem terumbu karang, yang merupakan rumah bagi 25% dari seluruh kehidupan laut.</li>
-            </ul>
+      <h2>4. Asidifikasi Air: Air Laut Menjadi Lebih Asam</h2>
+      <p>Peningkatan CO2 menyebabkan air laut menjadi lebih asam. Berdasarkan penelitian dari <a href="https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean-acidification" target="_blank">NOAA</a>, pH air laut telah turun sebesar 0,1 unit, yang berarti keasaman air meningkat 30%. Ini berdampak pada:</p>
+      <ul>
+        <li>Kerusakan cangkang organisme seperti kerang dan karang.</li>
+        <li>Gangguan kemampuan ikan mendeteksi predator.</li>
+        <li>Perubahan siklus nutrisi di laut yang mempengaruhi produktivitas ekosistem.</li>
+      </ul>
 
-            <h2>5. Sedimentasi: Perubahan Fisik Habitat Akuatik</h2>
-            <p>Erosi tanah yang berlebihan akibat praktik pertanian dan pembangunan yang tidak berkelanjutan menyebabkan
-            sedimentasi di badan air. Penelitian yang dilakukan oleh <a
-            href="https://wedocs.unep.org/handle/20.500.11822/27539;jsessionid=CEDC8A31E5F776FF07BD9C0E53C8104E" target="_blank">United Nations
-            Environment Programme (UNEP)</a> pada tahun 2022 mengestimasi bahwa sedimentasi telah mengurangi kapasitas
-            waduk global sebesar 25% dan mengancam kelangsungan hidup banyak spesies akuatik. Dampak sedimentasi meliputi:</p>
-            <ul>
-            <li>Peningkatan kekeruhan air, mengurangi penetrasi cahaya yang penting untuk fotosintesis tanaman air.</li>
-            <li>Tertutupnya habitat penting seperti daerah pemijahan ikan dan komunitas bentik.</li>
-            <li>Penyumbatan insang ikan, mengganggu proses pernapasan.</li>
-            <li>Perubahan aliran sungai dan morfologi dasar perairan.</li>
-            </ul>
+      <h2>5. Sedimentasi: Lumpur di Perairan</h2>
+      <p>Erosi tanah yang disebabkan oleh pertanian dan pembangunan membuat air menjadi keruh. Menurut <a href="https://wedocs.unep.org/handle/20.500.11822/27539" target="_blank">UNEP tahun 2022</a>, sedimentasi telah mengurangi kapasitas waduk global hingga 25%. Dampaknya termasuk:</p>
+      <ul>
+        <li>Kekeruhan air yang menghalangi sinar matahari masuk.</li>
+        <li>Habitat ikan rusak.</li>
+        <li>Insang ikan tersumbat, mengganggu pernapasan mereka.</li>
+      </ul>
 
-            <h2>6. Polusi Plastik: Ancaman Modern bagi Kehidupan Akuatik</h2>
-            <p>Polusi plastik telah menjadi masalah global yang semakin mengkhawatirkan. Laporan dari <a
-            href="https://www.ellenmacarthurfoundation.org/the-new-plastics-economy-rethinking-the-future-of-plastics" target="_blank">Ellen MacArthur
-            Foundation</a> tahun 2024 memproyeksikan bahwa pada tahun 2050, lautan kita akan mengandung lebih banyak
-            plastik berdasarkan berat daripada ikan jika tren saat ini berlanjut. Dampak polusi plastik pada ekosistem akuatik
-            meliputi:</p>
-            <ul>
-            <li>Terperangkapnya hewan laut dalam sampah plastik, menyebabkan cedera atau kematian.</li>
-            <li>Konsumsi mikroplastik oleh organisme air, yang dapat menyebabkan keracunan dan gangguan sistem pencernaan.</li>
-            <li>Penyebaran spesies invasif yang menempel pada sampah plastik yang mengapung.</li>
-            <li>Degradasi habitat penting seperti terumbu karang dan padang lamun akibat tertutup atau terbelit plastik.</li>
-            </ul>
+      <h2>6. Polusi Plastik: Masalah Serius</h2>
+      <p>Polusi plastik adalah ancaman besar. Menurut <a href="https://www.ellenmacarthurfoundation.org/the-new-plastics-economy-rethinking-the-future-of-plastics" target="_blank">Ellen MacArthur Foundation</a>, pada tahun 2050 lautan kita bisa lebih banyak plastik daripada ikan jika tidak ada tindakan. Dampaknya termasuk:</p>
+      <ul>
+        <li>Hewan laut terjerat plastik, menyebabkan cedera atau kematian.</li>
+        <li>Organisme air memakan mikroplastik yang berbahaya bagi kesehatan mereka.</li>
+      </ul>
 
-            <h2>Kesimpulan</h2>
-            <p>Dampak polusi air terhadap ekosistem akuatik sangat luas dan kompleks, mempengaruhi semua tingkat kehidupan air
-            dari mikroorganisme hingga predator puncak. Kerusakan yang ditimbulkan tidak hanya berdampak pada biodiversitas
-            tetapi juga pada kesehatan manusia dan ekonomi global yang bergantung pada sumber daya air. Upaya untuk
-            mengatasi polusi air membutuhkan pendekatan holistik yang melibatkan perbaikan praktik pengelolaan limbah, regulasi yang
-            lebih ketat terhadap pembuangan polutan, inovasi dalam teknologi pengolahan air, dan perubahan perilaku
-            konsumen. Hanya dengan tindakan kolektif dan komitmen global, kita dapat berharap untuk memulihkan dan melindungi
-            ekosistem akuatik kita yang berharga untuk generasi mendatang.</p>
+      <h2>Kesimpulan</h2>
+      <p>Dampak polusi air sangat luas dan kompleks. Untuk mengatasinya, kita perlu meningkatkan pengelolaan limbah dan menggunakan teknologi baru untuk mengurangi polusi.</p>
 
-            <p class="source">Sumber: UNEP, EPA, Environmental Science & Technology, WWF, NOAA, Ellen MacArthur Foundation.</p>
-        `,
+      <p class="source">Sumber: UNEP, EPA, Environmental Science & Technology, WWF, NOAA, Ellen MacArthur Foundation.</p>
+    `
   },
-  3: {
-    title:
-      "Teknologi Terkini dalam Pengolahan Air: Inovasi untuk Masa Depan yang Berkelanjutan",
-    image: "https://source.unsplash.com/random/800x400?water,technology",
-    content: `
-            <p>Seiring dengan meningkatnya tekanan pada sumber daya air global, inovasi dalam teknologi pengolahan air menjadi
-            semakin krusial. Artikel ini akan menjelajahi beberapa terobosan terbaru dalam teknologi pengolahan air, termasuk
-            desalinasi, filtrasi membran, dan sistem daur ulang air yang canggih.</p>
+  "3": {
+    "title": "Teknologi Pengolahan Air Terkini: Solusi untuk Masa Depan",
+    "image": "img/3.webp",
+    "content": `
+      <p>Dengan semakin menipisnya sumber daya air, inovasi teknologi pengolahan air menjadi sangat penting. Artikel ini akan membahas teknologi terbaru seperti desalinasi (mengubah air laut menjadi air minum), filtrasi membran, dan daur ulang air.</p>
 
-            <h2>1. Desalinasi: Mengubah Air Laut Menjadi Air Minum</h2>
-            <p>Desalinasi telah menjadi solusi penting bagi negara-negara yang menghadapi kelangkaan air tawar. Teknologi
-            terbaru dalam desalinasi meliputi:</p>
-            <ul>
-            <li>Osmosis Balik Lanjutan: Menurut <a href="https://www.nature.com/articles/s41545-019-0039-9" target="_blank">
-            penelitian yang dipublikasikan di Nature</a>, membran osmosis balik generasi baru dapat mengurangi konsumsi
-            energi hingga 20%.</li>
-            <li>Desalinasi Berbasis Grafena: Material baru ini menjanjikan efisiensi yang lebih tinggi dalam proses
-            penyaringan air laut.</li>
-            <li>Desalinasi Tenaga Surya: Proyek-proyek seperti yang dikembangkan oleh <a
-            href="https://news.mit.edu/2020/passive-solar-powered-water-desalination-0207" target="_blank">MIT</a>
-            menunjukkan potensi desalinasi yang digerakkan oleh energi matahari, mengurangi ketergantungan pada bahan
-            bakar fosil.</li>
-            </ul>
+      <h2>1. Desalinasi: Mengubah Air Laut Menjadi Air Minum</h2>
+      <p>Desalinasi adalah proses untuk menghilangkan garam dari air laut agar bisa diminum. Teknologi terbaru termasuk:</p>
+      <ul>
+        <li><strong>Osmosis Balik Lanjutan:</strong> Menurut penelitian yang diterbitkan di <a href="https://www.nature.com/articles/s41545-019-0039-9" target="_blank">Nature</a>, osmosis balik generasi baru bisa mengurangi penggunaan energi hingga 20%.</li>
+        <li><strong>Desalinasi Berbasis Grafena:</strong> Teknologi grafena membuat proses penyaringan lebih efisien.</li>
+        <li><strong>Desalinasi Tenaga Surya:</strong> Proyek dari <a href="https://news.mit.edu/2020/passive-solar-powered-water-desalination-0207" target="_blank">MIT</a> menunjukkan bahwa desalinasi bisa dilakukan dengan tenaga matahari, mengurangi penggunaan bahan bakar fosil.</li>
+      </ul>
 
-            <h2>2. Filtrasi Membran Canggih</h2>
-            <p>Teknologi membran telah berkembang pesat dalam beberapa tahun terakhir:</p>
-            <ul>
-            <li>Nanofiltrasi: Mampu menyaring kontaminan berukuran nano, termasuk virus dan ion logam berat.</li>
-            <li>Membran Self-Cleaning: Dikembangkan oleh peneliti di <a
-            href="https://news.yale.edu/2020/03/18/membrane-technology-cleans-water-cleans-itself" target="_blank">Yale
-            University</a>, membran ini dapat membersihkan dirinya sendiri, mengurangi kebutuhan perawatan.</li>
-            <li>Membran Biomimetik: Terinspirasi oleh proses alami dalam organisme hidup, membran ini menawarkan
-            selektivitas dan efisiensi yang lebih tinggi.</li>
-            </ul>
+      <h2>2. Filtrasi Membran Canggih</h2>
+      <p>Filtrasi membran adalah teknologi untuk menyaring air dari kontaminan. Teknologi terbaru termasuk:</p>
+      <ul>
+        <li><strong>Nanofiltrasi:</strong> Mampu menyaring kontaminan berukuran sangat kecil, termasuk virus.</li>
+        <li><strong>Membran Self-Cleaning:</strong> Dikembangkan oleh <a href="https://news.yale.edu/2020/03/18/membrane-technology-cleans-water-cleans-itself" target="_blank">Yale University</a>, membran ini bisa membersihkan dirinya sendiri, mengurangi perawatan.</li>
+        <li><strong>Membran Biomimetik:</strong> Terinspirasi oleh alam, membran ini sangat efisien.</li>
+      </ul>
 
-            <h2>3. Sistem Daur Ulang Air Canggih</h2>
-            <p>Daur ulang air menjadi semakin penting dalam manajemen sumber daya air:</p>
-            <ul>
-            <li>Sistem Pengolahan Air Limbah Terdistribusi: Teknologi ini memungkinkan pengolahan air limbah di lokasi,
-            mengurangi kebutuhan infrastruktur besar.</li>
-            <li>Bioreaktor Membran (MBR): Menggabungkan proses biologis dengan filtrasi membran untuk pengolahan air
-            limbah yang sangat efektif.</li>
-            <li>Teknologi NEWater: Dikembangkan di Singapura, sistem ini menggunakan teknologi membran dan UV lanjutan
-            untuk menghasilkan air daur ulang berkualitas tinggi.</li>
-            </ul>
+      <h2>3. Sistem Daur Ulang Air</h2>
+      <p>Daur ulang air semakin penting. Beberapa teknologi daur ulang air meliputi:</p>
+      <ul>
+        <li><strong>Sistem Terdistribusi:</strong> Teknologi ini memungkinkan air limbah diolah di tempat.</li>
+        <li><strong>Bioreaktor Membran (MBR):</strong> Menggabungkan proses biologis dan filtrasi membran untuk mengolah air limbah secara efektif.</li>
+        <li><strong>Teknologi NEWater:</strong> Dikembangkan di Singapura, NEWater menggunakan teknologi membran dan UV untuk menghasilkan air daur ulang berkualitas tinggi.</li>
+      </ul>
 
-            <h2>4. Pengolahan Air Berbasis AI dan IoT</h2>
-            <p>Kecerdasan buatan (AI) dan Internet of Things (IoT) sedang merevolusi cara kita mengelola dan mengolah air:</p>
-            <ul>
-            <li>Sistem Pemantauan Real-time: Sensor IoT memungkinkan pemantauan kualitas air secara konstan dan deteksi
-            dini kontaminasi.</li>
-            <li>Optimasi Proses Berbasis AI: Algoritma machine learning dapat mengoptimalkan proses pengolahan air,
-            meningkatkan efisiensi dan mengurangi penggunaan bahan kimia.</li>
-            <li>Prediksi Kebutuhan Air: AI dapat memprediksi kebutuhan air masa depan, membantu dalam perencanaan dan
-            manajemen sumber daya yang lebih baik.</li>
-            </ul>
+      <h2>4. Pengolahan Air Berbasis AI dan IoT</h2>
+      <p>Kecerdasan Buatan (AI) dan Internet of Things (IoT) membantu mengelola air lebih efisien:</p>
+      <ul>
+        <li><strong>Sistem Pemantauan Real-Time:</strong> Sensor IoT memungkinkan pemantauan kualitas air secara konstan.</li>
+        <li><strong>Optimasi Proses dengan AI:</strong> AI membantu meningkatkan efisiensi pengolahan air dan mengurangi penggunaan bahan kimia.</li>
+        <li><strong>Prediksi Kebutuhan Air:</strong> AI dapat memprediksi kebutuhan air di masa depan untuk manajemen yang lebih baik.</li>
+      </ul>
 
-            <h2>5. Teknologi Penyerapan dan Adsorpsi Inovatif</h2>
-            <p>Material baru sedang dikembangkan untuk meningkatkan efektivitas penyerapan kontaminan:</p>
-            <ul>
-            <li>Nanopartikel Magnetik: Dapat menghilangkan kontaminan seperti arsenik dan logam berat lainnya dari air.</li>
-            <li>Karbon Aktif Lanjutan: Dikembangkan dengan struktur pori yang lebih efisien untuk penyerapan kontaminan
-            organik.</li>
-            <li>Zeolit Sintetis: Material ini dapat disesuaikan untuk menangkap kontaminan spesifik dengan efektivitas
-            tinggi.</li>
-            </ul>
+      <h2>5. Teknologi Penyerapan Inovatif</h2>
+      <p>Material baru dikembangkan untuk menyerap kontaminan lebih baik, seperti:</p>
+      <ul>
+        <li><strong>Nanopartikel Magnetik:</strong> Menyerap zat beracun seperti arsenik dan logam berat.</li>
+        <li><strong>Karbon Aktif:</strong> Dengan pori yang lebih efisien untuk menyerap kontaminan organik.</li>
+        <li><strong>Zeolit Sintetis:</strong> Menyerap kontaminan spesifik dengan sangat efektif.</li>
+      </ul>
 
-            <h2>Kesimpulan</h2>
-            <p>Teknologi pengolahan air terus berkembang dengan pesat, menawarkan solusi untuk tantangan air global yang
-            semakin kompleks. Dari desalinasi yang lebih efisien hingga sistem daur ulang air canggih, inovasi-inovasi ini
-            membuka jalan menuju masa depan di mana air bersih tersedia secara berkelanjutan untuk semua. Namun, penting
-            untuk diingat bahwa teknologi harus diimplementasikan bersama dengan kebijakan yang tepat dan perubahan
-            perilaku untuk mencapai manajemen air yang benar-benar berkelanjutan.</p>
+      <h2>Kesimpulan</h2>
+      <p>Inovasi teknologi pengolahan air terus berkembang, menyediakan solusi untuk krisis air. Namun, kita juga perlu menggabungkan teknologi ini dengan kebijakan yang baik dan perubahan perilaku untuk mencapai pengelolaan air yang berkelanjutan.</p>
 
-            <p class="source">Sumber: Nature, MIT, Yale University, PubMed Central, Water Research.</p>
-        `,
+      <p class="source">Sumber: Nature, MIT, Yale University, PubMed Central, Water Research.</p>
+    `
   },
-  4: {
-    title:
-      "Dampak Perubahan Iklim terhadap Sumber Daya Air: Krisis Global yang Mendesak",
-    image: "https://source.unsplash.com/random/800x400?climate,water",
-    content: `
-            <p>Perubahan iklim telah menjadi salah satu ancaman terbesar bagi ketersediaan dan kualitas sumber daya air di
-            seluruh dunia. Artikel ini akan mengeksplorasi bagaimana perubahan iklim mempengaruhi siklus air global dan
-            dampaknya terhadap ekosistem serta masyarakat.</p>
+  "4": {
+    "title": "Dampak Perubahan Iklim terhadap Sumber Daya Air: Krisis Global",
+    "image": "img/4.webp",
+    "content": `
+      <p>Perubahan iklim telah menjadi salah satu ancaman terbesar bagi ketersediaan dan kualitas air di seluruh dunia. Artikel ini menjelaskan bagaimana perubahan iklim mempengaruhi siklus air dan dampaknya pada ekosistem serta masyarakat.</p>
 
-            <h2>1. Perubahan Pola Curah Hujan</h2>
-            <p>Menurut laporan terbaru dari Intergovernmental Panel on Climate Change (IPCC) tahun 2024, perubahan iklim telah
-            secara signifikan mengubah pola curah hujan global:</p>
-            <ul>
-            <li>Daerah kering menjadi lebih kering: Wilayah seperti Mediterania, Afrika Selatan, dan Australia Barat
-                mengalami penurunan curah hujan tahunan yang signifikan.</li>
-            <li>Daerah basah menjadi lebih basah: Bagian utara Eropa, Amerika Utara, dan Asia Tenggara mengalami peningkatan
-                curah hujan tahunan yang mengakibatkan banjir bandang dan hujan lebat.</li>
-            <li>Peningkatan frekuensi cuaca ekstrem: Kejadian hujan lebat dan banjir bandang meningkat sejak tahun 1980,
-                seperti dilaporkan oleh IPCC.</li>
-            </ul>
+      <h2>1. Perubahan Pola Curah Hujan</h2>
+      <p>Menurut <a href="https://www.ipcc.ch/report/ar6/wg1/" target="_blank">IPCC tahun 2024</a>, perubahan iklim mengubah pola curah hujan global. Wilayah kering menjadi lebih kering, seperti di Mediterania, Afrika Selatan, dan Australia Barat, sementara daerah basah seperti Eropa Utara dan Asia Tenggara mengalami curah hujan berlebih yang menyebabkan banjir.</p>
 
-            <h2>2. Dampak pada Ketersediaan Air Tawar</h2>
-            <p>Perubahan pola curah hujan dan suhu yang meningkat berdampak langsung pada ketersediaan air tawar:</p>
-            <ul>
-            <li>Mencairnya gletser: Menurut studi yang dipublikasikan dalam <a href="https://www.nature.com/articles/s41586-021-03436-z" target="_blank">Nature</a>, gletser di seluruh dunia kehilangan massa rata-rata 267 gigaton per tahun antara 2000 dan 2019, yang mengancam pasokan air tawar bagi miliaran orang.</li>
-            <li>Penurunan muka air tanah: Data dari <a href="https://grace.jpl.nasa.gov/" target="_blank">NASA GRACE-FO</a> menunjukkan penurunan muka air tanah di banyak akuifer utama dunia, terutama di daerah yang bergantung pada air tanah untuk irigasi.</li>
-            <li>Kekeringan yang berkepanjangan: Peningkatan kekeringan telah tercatat di berbagai wilayah kering dunia, seperti yang dilaporkan oleh <a href="https://www.ipcc.ch/report/ar6/wg1/" target="_blank">IPCC AR6</a>.</li>
-            </ul>
+      <h2>2. Dampak pada Ketersediaan Air Tawar</h2>
+      <p>Perubahan pola curah hujan dan suhu menyebabkan masalah pada ketersediaan air tawar. Menurut <a href="https://grace.jpl.nasa.gov/" target="_blank">NASA GRACE-FO</a>, banyak akuifer air tanah di seluruh dunia menipis, yang mengancam pasokan air bagi miliaran orang. Gletser yang mencair juga memperburuk masalah air tawar.</p>
 
-            <h2>3. Dampak pada Kualitas Air</h2>
-            <p>Perubahan iklim tidak hanya mempengaruhi kuantitas, tetapi juga kualitas air:</p>
-            <ul>
-            <li>Peningkatan suhu air: Suhu rata-rata air permukaan global meningkat, menyebabkan peningkatan pertumbuhan alga dan penurunan kadar oksigen terlarut, seperti yang dilaporkan oleh <a href="https://www.epa.gov/climate-indicators/climate-change-indicators-stream-temperature" target="_blank">EPA</a>.</li>
-            <li>Intrusi air laut: Kenaikan permukaan laut menyebabkan intrusi air asin ke akuifer pesisir, mengancam pasokan air tawar di daerah pantai. Studi oleh <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018WR023324" target="_blank">Water Resources Research</a> menunjukkan peningkatan risiko ini di banyak wilayah pesisir.</li>
-            <li>Peningkatan polusi: Curah hujan yang lebih intens meningkatkan limpasan permukaan, membawa lebih banyak polutan ke badan air.</li>
-            </ul>
+      <h2>3. Dampak pada Kualitas Air</h2>
+      <p>Perubahan iklim juga memperburuk kualitas air. Suhu air yang meningkat menyebabkan pertumbuhan alga yang tidak terkendali dan menurunkan kadar oksigen di dalam air. Selain itu, naiknya permukaan laut menyebabkan intrusi air asin ke akuifer pesisir, merusak pasokan air tawar di wilayah pesisir.</p>
 
-            <h2>4. Dampak pada Ekosistem Akuatik</h2>
-            <p>Perubahan iklim memiliki dampak luas pada ekosistem air tawar dan laut:</p>
-            <ul>
-            <li>Perubahan habitat: Pemanasan air mengubah distribusi spesies akuatik, memaksa beberapa spesies bermigrasi ke arah kutub atau ke perairan yang lebih dalam.</li>
-            <li>Ancaman terhadap keanekaragaman hayati: Menurut <a href="https://www.worldwildlife.org/publications/living-planet-report-2020" target="_blank">WWF Living Planet Report 2020</a>, populasi spesies air tawar telah menurun rata-rata 84% sejak 1970.</li>
-            <li>Perubahan siklus nutrisi: Perubahan suhu dan pola arus mempengaruhi siklus nutrisi di ekosistem akuatik, berdampak pada produktivitas primer dan rantai makanan.</li>
-            </ul>
+      <h2>4. Dampak pada Ekosistem Air</h2>
+      <p>Perubahan iklim memaksa banyak spesies air untuk bermigrasi ke wilayah yang lebih dingin, dan menyebabkan hilangnya habitat penting seperti terumbu karang. Menurut <a href="https://www.worldwildlife.org/publications/living-planet-report-2020" target="_blank">WWF</a>, populasi spesies air tawar telah menurun hingga 84% sejak 1970 karena perubahan iklim dan polusi.</p>
 
-            <h2>5. Implikasi Sosial-Ekonomi</h2>
-            <p>Dampak perubahan iklim pada sumber daya air memiliki implikasi luas bagi masyarakat dan ekonomi:</p>
-            <ul>
-            <li>Ketahanan pangan: Perubahan dalam ketersediaan air mempengaruhi produksi pertanian global. FAO memperkirakan bahwa perubahan iklim dapat mengurangi hasil panen hingga 30% di beberapa wilayah.</li>
-            <li>Konflik air: Kelangkaan air yang meningkat dapat memicu konflik, terutama di daerah lintas batas. <a href="https://www.un.org/en/chronicle/article/womenin-shadow-climate-change" target="_blank">UN Chronicle</a> melaporkan peningkatan risiko konflik terkait air di berbagai wilayah.</li>
-            <li>Migrasi iklim: Perubahan dalam ketersediaan air mendorong perpindahan populasi. World Bank memperkirakan bahwa hingga 216 juta orang mungkin bermigrasi secara internal akibat perubahan iklim pada tahun 2050.</li>
-            </ul>
+      <h2>5. Implikasi Sosial dan Ekonomi</h2>
+      <p>Perubahan iklim mempengaruhi ketahanan pangan dan meningkatkan risiko konflik terkait air. FAO memperkirakan bahwa perubahan iklim bisa mengurangi hasil panen hingga 30% di beberapa wilayah, dan kelangkaan air dapat memicu konflik antarwilayah.</p>
 
-            <h2>Kesimpulan dan Langkah ke Depan</h2>
-            <p>Dampak perubahan iklim terhadap sumber daya air adalah nyata dan semakin mendesak. Diperlukan tindakan kolektif dan cepat untuk mengatasi krisis ini:</p>
-            <ul>
-            <li>Mitigasi perubahan iklim: Mengurangi emisi gas rumah kaca untuk membatasi pemanasan global.</li>
-            <li>Adaptasi infrastruktur air: Meningkatkan ketahanan sistem penyediaan air terhadap perubahan iklim.</li>
-            <li>Konservasi air: Mengimplementasikan praktik penghematan air di semua sektor.</li>
-            <li>Penelitian dan inovasi: Mengembangkan teknologi baru untuk manajemen air yang lebih efisien.</li>
-            <li>Kerjasama internasional: Meningkatkan kolaborasi lintas batas dalam pengelolaan sumber daya air.</li>
-            </ul>
-            <p>Hanya dengan tindakan yang terkoordinasi dan berkelanjutan, kita dapat berharap untuk mengatasi tantangan air yang ditimbulkan oleh perubahan iklim dan menjamin ketersediaan air bersih untuk generasi mendatang.</p>
+      <h2>Kesimpulan</h2>
+      <p>Dampak perubahan iklim pada air adalah masalah serius yang perlu segera ditangani. Mengurangi emisi gas rumah kaca, memperbaiki infrastruktur air, dan mengimplementasikan praktik hemat air adalah langkah-langkah yang dapat diambil untuk mengatasi krisis ini.</p>
 
-            <p class="source">Sumber: IPCC, NASA, Nature, EPA, Water Resources Research, WWF, FAO, UN Chronicle, World Bank.</p>
-        `,
-  },
+      <p class="source">Sumber: IPCC, NASA, Nature, EPA, Water Resources Research, WWF, FAO, UN Chronicle, World Bank.</p>
+    `
+  }
 };
 
 // Mengisi konten artikel berdasarkan ID

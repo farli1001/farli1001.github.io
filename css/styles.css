@@ -148,7 +148,7 @@ nav {
 .cta-button {
   display: inline-block;
   background-color: var(--accent-color);
-  color: var(--primary-color);
+  color: var(--bg-color);
   padding: 1rem 2.5rem;
   border-radius: 50px;
   text-decoration: none;
@@ -178,7 +178,7 @@ nav {
 }
 
 .cta-button:hover {
-  background-color: var(--white);
+  background-color: var(--primary-color);
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -236,12 +236,13 @@ nav {
 .about-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 4rem;
 }
 
 .about-text {
   flex: 1;
+  max-width: 60%;
 }
 
 .about-text p {
@@ -271,11 +272,13 @@ nav {
 
 .about-image {
   flex: 1;
-  position: relative;
-  max-width: 500px;
+  position: sticky; 
+  max-width: 40%;
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  height: auto;
+  top: 100px;
 }
 
 .about-image img {
