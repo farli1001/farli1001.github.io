@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .hamburger-menu {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1000;
+}
+
+.droplet {
+  width: 12px;
+  height: 12px;
+  background-color: #3A9BD8;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.droplet-1 { top: 15px; left: 24px; }
+.droplet-2 { top: 30px; left: 24px; }
+.droplet-3 { top: 45px; left: 24px; }
+
+.hamburger-menu.active .droplet-1 {
+  transform: translateY(15px) scale(1.5);
+}
+
+.hamburger-menu.active .droplet-2 {
+  opacity: 0;
+}
+
+.hamburger-menu.active .droplet-3 {
+  transform: translateY(-15px) scale(1.5);
+}
+
+.main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(58, 155, 216, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.main-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.main-menu.active li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-menu a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.main-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.main-menu a:hover::after {
+  transform: translateX(0);
+}
+
+@keyframes waveEffect {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+  </style>
+</head>
+<body>
+  <button class="hamburger-menu" aria-label="Toggle menu">
+    <div class="droplet droplet-1"></div>
+    <div class="droplet droplet-2"></div>
+    <div class="droplet droplet-3"></div>
+  </button>
+  
+  <nav class="main-menu">
+    <ul>
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#facts">Fakta</a></li>
+      <li><a href="#articles">Artikel</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+  </nav>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mainMenu = document.querySelector('.main-menu');
+        const menuItems = mainMenu.querySelectorAll('li');
+
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('active');
+          mainMenu.classList.toggle('active');
+
+          if (mainMenu.classList.contains('active')) {
+            menuItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.style.animation = `waveEffect 1s ease ${index * 0.1}s infinite`;
+              }, index * 100);
+            });
+          } else {
+            menuItems.forEach(item => {
+              item.style.animation = 'none';
+            });
+          }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!hamburger.contains(e.target) && !mainMenu.contains(e.target)) {
+            hamburger.classList.remove('active');
+            mainMenu.classList.remove('active');
+            menuItems.forEach(item => {
+              item.style.animation = 'none';
+            });
+          }
+        });
+
+        // Ripple effect on menu items
+        menuItems.forEach(item => {
+          item.addEventListener('click', function (e) {
+            let ripple = document.createElement('div');
+            ripple.className = 'ripple';
+            this.appendChild(ripple);
+
+            let x = e.clientX - this.offsetLeft;
+            let y = e.clientY - this.offsetTop;
+
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+
+            setTimeout(() => {
+              ripple.remove();
+            }, 600);
+          });
+        });
+      });
+  </script>
+</body>
+</html>
