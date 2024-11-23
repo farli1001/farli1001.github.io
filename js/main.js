@@ -117,7 +117,7 @@ factNumbers.forEach((number) => {
 });
 
 // Articles loading
-const articles = [
+const article = [
   {
     id: 1,
     title: "10 Cara Efektif Menghemat Air di Rumah",
@@ -147,6 +147,21 @@ const articles = [
       "Seberapa bahaya sih perubahan iklim terhadap masalah perairan ini",
     image: "img/4.webp",
   },
+  {
+    id: 5,
+    title:
+      "Konservasi Air di Perkotaan: Langkah-Langkah Strategis Mengatasi Krisis Air",
+    excerpt:
+      "Pelajari strategi konservasi air untuk kota besar, termasuk teknologi deteksi kebocoran dan pengelolaan air hujan.",
+    image: "img/5.webp",
+  },
+  {
+    id: 6,
+    title: "Kasus Krisis Air di Cape Town: Pelajaran dari Hari Nol",
+    excerpt:
+      "Mengungkap krisis air di Cape Town tahun 2018 yang nyaris mencapai 'Hari Nol' dan langkah-langkah penyelamatan.",
+    image: "img/6.webp",
+  },
 ];
 
 function escapeHTML(str) {
@@ -173,7 +188,7 @@ function createArticleCard(article) {
     <div class="article-content">
       <h3 class="article-title">${escapeHTML(article.title)}</h3>
       <p class="article-excerpt">${escapeHTML(article.excerpt)}</p>
-      <a href="artikel.html?id=${
+      <a href="artikel.php?id=${
         article.id
       }" class="read-more">Baca Selengkapnya</a>
     
@@ -184,7 +199,7 @@ function createArticleCard(article) {
 
 function loadArticles() {
   const articleGrid = document.getElementById("article-grid");
-  articles.forEach((article) => {
+  article.forEach((article) => {
     const articleElement = createArticleCard(article);
     articleGrid.appendChild(articleElement);
   });
